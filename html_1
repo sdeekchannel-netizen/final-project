@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MNstudy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="app-header">
+    <h1 class="logo">MNstudy</h1>
+    <nav class="nav">
+      <a href="#" data-section="dashboard" class="active">Dashboard</a>
+      <a href="#" data-section="tasks">Tasks</a>
+      <a href="#" data-section="habits">Habits</a>
+      <a href="#" data-section="resources">Resources</a>
+      <a href="#" data-section="about">about</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section id="dashboard" class="section active">
+      <h2>Dashboard</h2>
+      <p>ملخص سريع عن التقدم.</p>
+      <div class="cards">
+        <div class="card">عدد المهام</div>
+        <div class="card">المهام المكتملة</div>
+        <div class="card">سلسلة العادات</div>
+      </div>
+    </section>
+
+    <section id="tasks" class="section">
+  <h2>Tasks</h2>
+
+  <form id="taskForm" class="box">
+    <input type="text" id="taskTitle" placeholder="عنوان المهمة" required />
+    <input type="date" id="taskDate" required />
+    <select id="taskPriority">
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+    <button type="submit">إضافة مهمة</button>
+  </form>
+
+  <ul id="taskList" class="list"></ul>
+</section>
+
+    <section id="habits" class="section">
+      <h2>Habits</h2>
+
+      <form class="box">
+        <input type="text" placeholder="اسم العادة" />
+        <input type="number" min="1" max="7" placeholder="الهدف الأسبوعي" />
+        <button>إضافة عادة</button>
+      </form>
+
+      <p>سيتم إضافة تتبع الأيام لاحقًا.</p>
+    </section>
+
+    <section id="resources" class="section">
+      <h2>Resources</h2>
+      <input type="text" placeholder="بحث عن مورد" class="box" />
+      <p>سيتم تحميل الموارد من ملف JSON.</p>
+    </section>
+
+    <section id="about" class="section">
+      <p> تم اعداد هذا الموقع المتخصص بمتابعة حالات ودرجات الطلاب 
+       <br> عمل الطالب :صديق حسام الدين محمود الدن</br>
+        <br>لرقم الجامعي :120221108
+      </br>
+        
+      </p>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
